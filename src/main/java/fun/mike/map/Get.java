@@ -1,6 +1,5 @@
 package fun.mike.map;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
@@ -28,7 +27,7 @@ public class Get {
     public static String requiredUrl(Map<String, Object> config, String key) {
         String url = requiredStringOfType(config, key, "URL");
         UrlValidator.http(url)
-            .orThrow(String.format("Invalid value \"%s\" for URL property %s", url, key));
+                .orThrow(String.format("Invalid value \"%s\" for URL property %s", url, key));
         return url;
     }
 
