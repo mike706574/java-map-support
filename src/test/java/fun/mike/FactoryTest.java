@@ -3,10 +3,8 @@ package fun.mike.map;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import java.util.*;
+import java.util.Map;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 public class FactoryTest {
@@ -20,7 +18,7 @@ public class FactoryTest {
     public void one() {
         Map<String, Integer> map = Factory.mapOf("foo", 1);
         assertEquals(1, map.size());
-        assertEquals(new Integer(1), (Integer)map.get("foo"));
+        assertEquals(new Integer(1), (Integer) map.get("foo"));
     }
 
     @Test
