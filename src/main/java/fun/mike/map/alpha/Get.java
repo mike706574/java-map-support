@@ -1,4 +1,4 @@
-package fun.mike.map;
+package fun.mike.map.alpha;
 
 import java.util.List;
 import java.util.Map;
