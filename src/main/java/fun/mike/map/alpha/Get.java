@@ -15,7 +15,7 @@ public class Get {
             String optionsStr = options.stream()
                     .map(option -> String.format("\"%s\"", option))
                     .collect(Collectors.joining(", "));
-            String message = String.format("Unsupported value \"%s\" for enumerated string property %s. Valid options: %s",
+            String message = String.format("Unsupported value \"%s\" for enumerated string property \"%s\". Valid options: %s",
                     value,
                     key,
                     optionsStr);
@@ -24,34 +24,42 @@ public class Get {
         return value;
     }
 
-    public static String requiredUrl(Map<String, Object> config, String key) {
-        String url = requiredStringOfType(config, key, "URL");
+    public static String populatedUrl(Map<String, Object> config, String key) {
+        String url = populatedStringOfType(config, key, "URL");
         UrlValidator.http(url)
-                .orThrow(String.format("Invalid value \"%s\" for URL property %s", url, key));
+                .orThrow(String.format("Invalid value \"%s\" for URL property \"%s\"", url, key));
         return url;
+    }
+
+    public static String populatedString(Map<String, Object> config, String key) {
+        return populatedStringOfType(config, key, "string");
     }
 
     public static String requiredString(Map<String, Object> config, String key) {
         return requiredStringOfType(config, key, "string");
     }
 
-    public static String requiredStringOfType(Map<String, Object> config, String key, String type) {
-        if (!config.containsKey(key)) {
-            String message = String.format("Missing required %s property: %s",
-                    type,
-                    key);
-            throw new NoSuchElementException(message);
-        }
-
-        String value = (String) config.get(key);
+    public static String populatedStringOfType(Map<String, Object> config, String key, String type) {
+        String value = requiredStringOfType(config, key, type);
 
         if (value.trim().equals("")) {
-            String message = String.format("Value for %s property %s was blank.",
+            String message = String.format("Value for \"%s\" property %s was blank.",
                     type,
                     key);
             throw new IllegalArgumentException(message);
         }
 
         return value;
+    }
+
+    public static String requiredStringOfType(Map<String, Object> config, String key, String type) {
+        if (!config.containsKey(key)) {
+            String message = String.format("Missing required %s property \"%s\".",
+                    type,
+                    key);
+            throw new NoSuchElementException(message);
+        }
+
+        return (String) config.get(key);
     }
 }

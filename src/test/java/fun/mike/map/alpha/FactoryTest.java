@@ -5,7 +5,6 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.Map;
 
-import fun.mike.map.alpha.Factory;
 import org.junit.Test;
 
 public class FactoryTest {
