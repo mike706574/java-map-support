@@ -8,8 +8,8 @@ import java.util.stream.Collectors;
 import fun.mike.validation.UrlValidator;
 
 public class Get {
-    public static String requiredStringEnum(Map<String, Object> config, String key, List<String> options) {
-        String value = requiredString(config, key);
+    public static String requiredStringEnum(Map<String, Object> map, String key, List<String> options) {
+        String value = requiredString(map, key);
         List<String> uppercaseOptions = options.stream().map(String::toUpperCase).collect(Collectors.toList());
         if (!uppercaseOptions.contains(value.toUpperCase())) {
             String optionsStr = options.stream()
@@ -24,23 +24,23 @@ public class Get {
         return value;
     }
 
-    public static String populatedUrl(Map<String, Object> config, String key) {
-        String url = populatedStringOfType(config, key, "URL");
+    public static String populatedUrl(Map<String, Object> map, String key) {
+        String url = populatedStringOfType(map, key, "URL");
         UrlValidator.http(url)
                 .orThrow(String.format("Invalid value \"%s\" for URL property \"%s\"", url, key));
         return url;
     }
 
-    public static String populatedString(Map<String, Object> config, String key) {
-        return populatedStringOfType(config, key, "string");
+    public static String populatedString(Map<String, Object> map, String key) {
+        return populatedStringOfType(map, key, "string");
     }
 
-    public static String requiredString(Map<String, Object> config, String key) {
-        return requiredStringOfType(config, key, "string");
+    public static String requiredString(Map<String, Object> map, String key) {
+        return requiredStringOfType(map, key, "string");
     }
 
-    public static String populatedStringOfType(Map<String, Object> config, String key, String type) {
-        String value = requiredStringOfType(config, key, type);
+    public static String populatedStringOfType(Map<String, Object> map, String key, String type) {
+        String value = requiredStringOfType(map, key, type);
 
         if (value.trim().equals("")) {
             String message = String.format("Value for \"%s\" property %s was blank.",
@@ -52,14 +52,14 @@ public class Get {
         return value;
     }
 
-    public static String requiredStringOfType(Map<String, Object> config, String key, String type) {
-        if (!config.containsKey(key)) {
+    public static String requiredStringOfType(Map<String, Object> map, String key, String type) {
+        if (!map.containsKey(key)) {
             String message = String.format("Missing required %s property \"%s\".",
                     type,
                     key);
             throw new NoSuchElementException(message);
         }
 
-        return (String) config.get(key);
+        return (String) map.get(key);
     }
 }
