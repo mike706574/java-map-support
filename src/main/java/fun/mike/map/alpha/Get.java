@@ -16,9 +16,9 @@ public class Get {
                     .map(option -> String.format("\"%s\"", option))
                     .collect(Collectors.joining(", "));
             String message = String.format("Unsupported value \"%s\" for enumerated string property \"%s\". Valid options: %s",
-                    value,
-                    key,
-                    optionsStr);
+                                           value,
+                                           key,
+                                           optionsStr);
             throw new IllegalArgumentException(message);
         }
         return value;
@@ -44,8 +44,8 @@ public class Get {
 
         if (value.trim().equals("")) {
             String message = String.format("Value for \"%s\" property %s was blank.",
-                    type,
-                    key);
+                                           type,
+                                           key);
             throw new IllegalArgumentException(message);
         }
 
@@ -55,8 +55,8 @@ public class Get {
     public static String requiredStringOfType(Map<String, Object> map, String key, String type) {
         if (!map.containsKey(key)) {
             String message = String.format("Missing required %s property \"%s\".",
-                    type,
-                    key);
+                                           type,
+                                           key);
             throw new NoSuchElementException(message);
         }
 
