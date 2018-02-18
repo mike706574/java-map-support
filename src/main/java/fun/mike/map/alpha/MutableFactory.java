@@ -1,6 +1,5 @@
 package fun.mike.map.alpha;
 
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.LinkedHashMap;
