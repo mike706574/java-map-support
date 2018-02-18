@@ -5,24 +5,24 @@ import java.util.Map;
 import java.util.LinkedHashMap;
 
 public class MutableFactory {
-    public static <K, V> Map<K, V> mapOf() {
+    public static <K, V> Map<K, V> mutableMapOf() {
         return new HashMap<>();
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1) {
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1) {
         Map<K, V> map = new HashMap<>();
         map.put(k1, v1);
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2) {
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2) {
         Map<K, V> map = new HashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3) {
         Map<K, V> map = new HashMap<>();
         map.put(k1, v1);
@@ -31,7 +31,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4) {
         Map<K, V> map = new HashMap<>();
         map.put(k1, v1);
@@ -41,7 +41,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5) {
         Map<K, V> map = new HashMap<>();
@@ -53,7 +53,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6) {
         Map<K, V> map = new HashMap<>();
@@ -66,7 +66,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7) {
@@ -81,7 +81,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8) {
@@ -97,7 +97,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -115,7 +115,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -134,7 +134,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -155,7 +155,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf​(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf​(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -177,7 +177,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -201,7 +201,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -226,7 +226,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -253,7 +253,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -281,7 +281,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -311,7 +311,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -342,7 +342,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -375,7 +375,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -409,7 +409,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -445,7 +445,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -482,7 +482,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -521,7 +521,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -561,7 +561,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -603,24 +603,24 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf() {
+    public static <K, V> Map<K, V> mutableOrderedMapOf() {
         return new LinkedHashMap<>();
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1) {
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1) {
         Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2) {
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2) {
         Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3) {
         Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
@@ -629,7 +629,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4) {
         Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
@@ -639,7 +639,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5) {
         Map<K, V> map = new LinkedHashMap<>();
@@ -651,7 +651,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6) {
         Map<K, V> map = new LinkedHashMap<>();
@@ -664,7 +664,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7) {
@@ -679,7 +679,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8) {
@@ -695,7 +695,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -713,7 +713,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -732,7 +732,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -753,7 +753,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf​(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf​(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -775,7 +775,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -799,7 +799,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -824,7 +824,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -851,7 +851,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -879,7 +879,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -909,7 +909,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -940,7 +940,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -973,7 +973,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -1007,7 +1007,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -1043,7 +1043,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -1080,7 +1080,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -1119,7 +1119,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -1159,7 +1159,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
