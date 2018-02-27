@@ -10,9 +10,24 @@ import org.junit.rules.ExpectedException;
 
 import static org.junit.Assert.assertEquals;
 
-public class GetTest {
+public class GetStringObjectTest {
     @Rule
     public ExpectedException thrown = ExpectedException.none();
+
+    @Test
+    public void requiredFound() {
+        Map<String, Object> map = new HashMap<>();
+        map.put("foo", "bar");
+        assertEquals("bar", Get.required(map, "foo"));
+    }
+
+    @Test
+    public void requiredMissing() {
+        thrown.expect(NoSuchElementException.class);
+        thrown.expectMessage("Missing required property \"foo\".");
+        Map<String, Object> map = new HashMap<>();
+        Get.required(map, "foo");
+    }
 
     @Test
     public void requiredStringFound() {
@@ -37,7 +52,6 @@ public class GetTest {
     }
 
     @Test
-
     public void populatedStringFound() {
         Map<String, Object> map = new HashMap<>();
         map.put("foo", "bar");
