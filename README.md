@@ -18,9 +18,10 @@ import static fun.mike.map.alpha.Factory.mapOf;
 Map<String, Integer> map = mapOf("foo", 1,
                                  "bar", 2);
 
-// => {bar=2, foo=1} (an instance of java.util.Collections$UnmodifiableMap, made from a java.util.LinkedHashMap)
+// => {bar=2, foo=1}
 ```
 
+You'll get an instance of `java.util.Collections$UnmodifiableMap`, made from a `java.util.LinkedHashMap`.
 
 ## Copyright and License
 
