@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 
 public class GetStringObjectTest {
     @Rule
-    public final ExpectedException thrown = ExpectedException.none();
+    public ExpectedException thrown = ExpectedException.none();
 
     @Test
     public void requiredFound() {
