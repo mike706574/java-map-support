@@ -1,23 +1,22 @@
 package fun.mike.map.alpha;
 
 import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class Factory {
     public static <K, V> Map<K, V> mapOf() {
-        return Collections.unmodifiableMap(new HashMap<>());
+        return Collections.unmodifiableMap(new LinkedHashMap<>());
     }
 
     public static <K, V> Map<K, V> mapOf(K k1, V v1) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         return Collections.unmodifiableMap(map);
     }
 
     public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         return Collections.unmodifiableMap(map);
@@ -25,7 +24,7 @@ public class Factory {
 
     public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
             K k3, V v3) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -34,7 +33,7 @@ public class Factory {
 
     public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -45,7 +44,7 @@ public class Factory {
     public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -57,7 +56,7 @@ public class Factory {
     public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -71,7 +70,7 @@ public class Factory {
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -86,7 +85,7 @@ public class Factory {
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -103,7 +102,7 @@ public class Factory {
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
             K k9, V v9) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -121,7 +120,7 @@ public class Factory {
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
             K k9, V v9, K k10, V v10) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -141,7 +140,7 @@ public class Factory {
             K k7, V v7, K k8, V v8,
             K k9, V v9, K k10, V v10,
             K k11, V v11) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -156,13 +155,13 @@ public class Factory {
         return Collections.unmodifiableMap(map);
     }
 
-    public static <K, V> Map<K, V> mapOf​(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
             K k9, V v9, K k10, V v10,
             K k11, V v11, K k12, V v12) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -185,7 +184,7 @@ public class Factory {
             K k9, V v9, K k10, V v10,
             K k11, V v11, K k12, V v12,
             K k13, V v13) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -209,7 +208,7 @@ public class Factory {
             K k9, V v9, K k10, V v10,
             K k11, V v11, K k12, V v12,
             K k13, V v13, K k14, V v14) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -235,7 +234,7 @@ public class Factory {
             K k11, V v11, K k12, V v12,
             K k13, V v13, K k14, V v14,
             K k15, V v15) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -262,7 +261,7 @@ public class Factory {
             K k11, V v11, K k12, V v12,
             K k13, V v13, K k14, V v14,
             K k15, V v15, K k16, V v16) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -291,7 +290,7 @@ public class Factory {
             K k13, V v13, K k14, V v14,
             K k15, V v15, K k16, V v16,
             K k17, V v17) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -321,7 +320,7 @@ public class Factory {
             K k13, V v13, K k14, V v14,
             K k15, V v15, K k16, V v16,
             K k17, V v17, K k18, V v18) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -353,7 +352,7 @@ public class Factory {
             K k15, V v15, K k16, V v16,
             K k17, V v17, K k18, V v18,
             K k19, V v19) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -386,7 +385,7 @@ public class Factory {
             K k15, V v15, K k16, V v16,
             K k17, V v17, K k18, V v18,
             K k19, V v19, K k20, V v20) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -421,7 +420,7 @@ public class Factory {
             K k17, V v17, K k18, V v18,
             K k19, V v19, K k20, V v20,
             K k21, V v21) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -457,7 +456,7 @@ public class Factory {
             K k17, V v17, K k18, V v18,
             K k19, V v19, K k20, V v20,
             K k21, V v21, K k22, V v22) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -495,7 +494,7 @@ public class Factory {
             K k19, V v19, K k20, V v20,
             K k21, V v21, K k22, V v22,
             K k23, V v23) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -534,7 +533,7 @@ public class Factory {
             K k19, V v19, K k20, V v20,
             K k21, V v21, K k22, V v22,
             K k23, V v23, K k24, V v24) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -575,7 +574,7 @@ public class Factory {
             K k21, V v21, K k22, V v22,
             K k23, V v23, K k24, V v24,
             K k25, V v25) {
-        Map<K, V> map = new HashMap<>();
+        Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);
         map.put(k2, v2);
         map.put(k3, v3);
@@ -754,7 +753,7 @@ public class Factory {
         return Collections.unmodifiableMap(map);
     }
 
-    public static <K, V> Map<K, V> orderedMapOf​(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> orderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
