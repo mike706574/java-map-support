@@ -2,7 +2,7 @@
 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/fun.mike/map-support-alpha/badge.svg)](https://maven-badges.herokuapp.com/maven-central/fun.mike/map-support-alpha)
 
-Map utilities.
+Map utilities for Java.
 
 ## Copyright and License
 
