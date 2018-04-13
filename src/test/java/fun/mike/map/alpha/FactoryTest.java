@@ -18,7 +18,7 @@ public class FactoryTest {
     public void one() {
         Map<String, Integer> map = Factory.mapOf("foo", 1);
         assertEquals(1, map.size());
-        assertEquals(new Integer(1), (Integer) map.get("foo"));
+        assertEquals(new Integer(1), map.get("foo"));
     }
 
     @Test

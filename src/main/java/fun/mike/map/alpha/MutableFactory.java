@@ -155,7 +155,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mutableMapOf​(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
@@ -753,7 +753,7 @@ public class MutableFactory {
         return map;
     }
 
-    public static <K, V> Map<K, V> mutableOrderedMapOf​(K k1, V v1, K k2, V v2,
+    public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
             K k7, V v7, K k8, V v8,
