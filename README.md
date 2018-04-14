@@ -23,7 +23,7 @@ Map<String, Integer> map = mapOf("foo", 1,
 
 #### Ordered unmodifiable maps
 
-Use `fun.mike.map.alpha.Factory/mapOf` to make ordered unmodifiable maps.
+Use `fun.mike.map.alpha.Factory/orderedMapOf` to make ordered unmodifiable maps.
 
 ```java
 import static fun.mike.map.alpha.Factory.orderedMapOf;
@@ -36,7 +36,7 @@ Map<String, Integer> map = orderedMapOf("foo", 1,
 
 #### Mutable maps
 
-Use `fun.mike.map.alpha.Factory/mapOf` to make unordered mutable maps.
+Use `fun.mike.map.alpha.MutableFactory/mutableMapOf` to make unordered mutable maps.
 
 ```java
 import static fun.mike.map.alpha.Factory.mutableMapOf;
