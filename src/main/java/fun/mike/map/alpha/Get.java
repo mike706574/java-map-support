@@ -17,6 +17,9 @@ public class Get {
      * @param options acceptable values
      * @param <T> the type of value
      * @return The string value
+     * @throws java.util.NoSuchElementException if the required value is not
+     * present
+     * @throws java.lang.IllegalArgumentException if the value is in valid
      */
     public static <T> String requiredStringEnum(Map<String, T> map, String key, List<String> options) {
         String value = requiredString(map, key);
@@ -42,6 +45,9 @@ public class Get {
      * @param key a key
      * @param <T> the type of value
      * @return the string value
+     * @throws java.util.NoSuchElementException if the required value is not
+     * present
+     * @throws java.lang.IllegalArgumentException if the value is in valid
      */
     public static <T> String populatedUrl(Map<String, T> map, String key) {
         String url = populatedStringOfType(map, key, "URL");
@@ -58,6 +64,9 @@ public class Get {
      * @param key A key
      * @param <T> The type of value
      * @return The string value
+     * @throws java.util.NoSuchElementException if the required value is not
+     * present
+     * @throws java.lang.IllegalArgumentException if the value is in valid
      */
     public static <T> String populatedString(Map<String, T> map, String key) {
         return populatedStringOfType(map, key, "string");
@@ -71,6 +80,9 @@ public class Get {
      * @param key a key
      * @param <T> the type of value
      * @return the string value
+     * @throws java.util.NoSuchElementException if the required value is not
+     * present
+     * @throws java.lang.IllegalArgumentException if the value is in valid
      */
     public static <T> String requiredString(Map<String, T> map, String key) {
         return requiredStringOfType(map, key, "string");
@@ -86,6 +98,9 @@ public class Get {
      * @param type a type label
      * @param <T> the type of value
      * @return the string value
+     * @throws java.util.NoSuchElementException if the required value is not
+     * present
+     * @throws java.lang.IllegalArgumentException if the value is in valid
      */
     public static <T> String populatedStringOfType(Map<String, T> map, String key, String type) {
         String value = requiredStringOfType(map, key, type);
@@ -110,6 +125,9 @@ public class Get {
      * @param type a type label
      * @param <T> the type of value
      * @return the string value
+     * @throws java.util.NoSuchElementException if the required value is not
+     * present
+     * @throws java.lang.IllegalArgumentException if the value is in valid
      */
     public static <T> String requiredStringOfType(Map<String, T> map, String key, String type) {
         if (!map.containsKey(key)) {
@@ -138,12 +156,14 @@ public class Get {
 
     /**
      * Validates that the value from {@code map} for the given {@code key} is
-     * a present. Returns the value when present; otherwise, throws
-     * an {@code NoSuchElementException}.
+     * a present. Returns the value when present; otherwise, throws a
+     * {@code NoSuchElementException}.
      * @param map a map
      * @param key a key
      * @param <T> the type of value
      * @return the string value
+     * @throws java.util.NoSuchElementException if the required value is not
+     * present
      */
     public static <T> T required(Map<String, T> map, String key) {
         if (!map.containsKey(key)) {
