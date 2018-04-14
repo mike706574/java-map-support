@@ -61,6 +61,81 @@ Map<String, Integer> map = mutableOrderedMapOf("foo", 1,
 // => {foo=1, bar=2} (java.util.LinkedHashMap)
 ```
 
+### Access
+
+Use `fun.mike.map.alpha.Get` to get validated values from maps.
+
+#### Anything
+
+```java
+import static fun.mike.map.alpha.Get.required;
+
+Map<String, Object> map = mapOf("foo", "bar");
+
+required(map, "foo");
+// => "bar"
+
+required(map, "baz");
+// => java.util.NoSuchElementException: Missing required property "baz".
+```
+
+#### Strings
+
+Required strings:
+
+```java
+import static fun.mike.map.alpha.Get.requiredString;
+
+Map<String, Object> map = mapOf("ok", "foo",
+                                "text", 1);
+
+requiredString(map, "ok");
+// => "foo"
+
+requiredString(map, "missing");
+// => java.util.NoSuchElementException: Missing required string value for key "missing".
+
+requiredString(map, "text");
+// => java.lang.IllegalArgumentException: Value "1" of class "java.lang.Integer" for key "text" must be a string.
+```
+
+Populated strings:
+
+```java
+import static fun.mike.map.alpha.Get.populatedString;
+
+Map<String, Object> map = mapOf("ok", "foo",
+                                "empty", " ",
+                                "text", 1);
+
+populatedString(map, "ok");
+// => "foo"
+
+populated(map, "missing");
+    // => java.util.NoSuchElementException: Missing required string value for key "missing".
+
+populated(map, "empty");
+// => java.util.NoSuchElementException: Value " " for key "empty" must be populated.
+
+populatedString(map, "text");
+// => java.lang.IllegalArgumentException: Value "1" of class "java.lang.Integer" for key "text" must be a string.
+```
+
+String URLs:
+
+```java
+import static fun.mike.map.alpha.Get.populatedString;
+
+Map<String, Object> map = mapOf("valid", "http://foo.com",
+                                "invalid", "hewa:/ea90mS-fwa");
+
+populatedString(map, "valid");
+// => "http://foo.com",
+
+populatedString(map, "invalid");
+// => java.lang/IllegalArgumentException: Invalid URL value "hewa:/ea90mS-fwa" for key "foo": Scheme "hewa" not allowed. Allowed schemes: http, https
+```
+
 ## Build
 
 [![CircleCI](https://circleci.com/gh/mike706574/java-map-support.svg?style=svg)](https://circleci.com/gh/mike706574/java-map-support)

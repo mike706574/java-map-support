@@ -46,7 +46,7 @@ public class Get {
     public static <T> String populatedUrl(Map<String, T> map, String key) {
         String url = populatedStringOfType(map, key, "URL");
         UrlValidator.http(url)
-                .orThrow(String.format("Invalid value \"%s\" for URL property \"%s\"", url, key));
+                .orThrow(String.format("Invalid URL value \"%s\" for key \"%s\"", url, key));
         return url;
     }
 
@@ -91,8 +91,8 @@ public class Get {
         String value = requiredStringOfType(map, key, type);
 
         if (value.trim().equals("")) {
-            String message = String.format("Value for \"%s\" property %s was blank.",
-                                           type,
+            String message = String.format("Value \"%s\" for key \"%s\" must be populated.",
+                                           value,
                                            key);
             throw new IllegalArgumentException(message);
         }
@@ -113,13 +113,27 @@ public class Get {
      */
     public static <T> String requiredStringOfType(Map<String, T> map, String key, String type) {
         if (!map.containsKey(key)) {
-            String message = String.format("Missing required %s property \"%s\".",
+            String message = String.format("Missing required %s value for key \"%s\".",
                                            type,
                                            key);
             throw new NoSuchElementException(message);
         }
 
-        return (String) map.get(key);
+        Object value = map.get(key);
+
+        if (value == null) {
+            return null;
+        }
+
+        if (value instanceof String) {
+            return (String) value;
+        }
+
+        String message = String.format("Value \"%s\" of class \"%s\" for key \"%s\" must be a string.",
+                                       value,
+                                       value.getClass().getName(),
+                                       key);
+        throw new IllegalArgumentException(message);
     }
 
     /**
@@ -133,7 +147,7 @@ public class Get {
      */
     public static <T> T required(Map<String, T> map, String key) {
         if (!map.containsKey(key)) {
-            String message = String.format("Missing required property \"%s\".",
+            String message = String.format("Missing required value for key \"%s\".",
                                            key);
             throw new NoSuchElementException(message);
         }

@@ -24,7 +24,7 @@ public class GetStringStringTest {
     @Test
     public void requiredMissing() {
         thrown.expect(NoSuchElementException.class);
-        thrown.expectMessage("Missing required property \"foo\".");
+        thrown.expectMessage("Missing required value for key \"foo\".");
         Map<String, String> map = new HashMap<>();
         Get.required(map, "foo");
     }
@@ -42,11 +42,11 @@ public class GetStringStringTest {
         map.put("foo", "");
         assertEquals("", Get.requiredString(map, "foo"));
     }
-    
+
     @Test
     public void requiredStringMissing() {
         thrown.expect(NoSuchElementException.class);
-        thrown.expectMessage("Missing required string property \"foo\".");
+        thrown.expectMessage("Missing required string value for key \"foo\".");
         Map<String, String> map = new HashMap<>();
         Get.requiredString(map, "foo");
     }
@@ -61,7 +61,7 @@ public class GetStringStringTest {
     @Test
     public void populatedStringBlank() {
         thrown.expect(IllegalArgumentException.class);
-        thrown.expectMessage("Value for \"string\" property foo was blank.");
+        thrown.expectMessage("Value \"\" for key \"foo\" must be populated.");
         Map<String, String> map = new HashMap<>();
         map.put("foo", "");
         assertEquals("", Get.populatedString(map, "foo"));
@@ -70,7 +70,7 @@ public class GetStringStringTest {
     @Test
     public void populatedStringMissing() {
         thrown.expect(NoSuchElementException.class);
-        thrown.expectMessage("Missing required string property \"foo\".");
+        thrown.expectMessage("Missing required string value for key \"foo\".");
         Map<String, String> map = new HashMap<>();
         Get.populatedString(map, "foo");
     }
