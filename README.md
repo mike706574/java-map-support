@@ -4,7 +4,11 @@
 
 Map utilities for Java.
 
-## Usage
+## Documentation
+
+[API Docs](https://mike706574.github.io/java-map-support/)
+
+## Examples
 
 ### Factory methods
 
