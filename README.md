@@ -76,7 +76,7 @@ required(map, "foo");
 // => "bar"
 
 required(map, "baz");
-// => java.util.NoSuchElementException: Missing required property "baz".
+// => java.util.NoSuchElementException: Missing required value for key "baz".
 ```
 
 #### Strings
