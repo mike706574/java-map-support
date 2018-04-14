@@ -76,7 +76,7 @@ required(map, "foo");
 // => "bar"
 
 required(map, "baz");
-// => java.util.NoSuchElementException: Missing required property "baz".
+// => java.util.NoSuchElementException: Missing required value for key "baz".
 ```
 
 #### Strings
@@ -133,7 +133,7 @@ populatedString(map, "valid");
 // => "http://foo.com",
 
 populatedString(map, "invalid");
-// => java.lang/IllegalArgumentException: Invalid URL value "hewa:/ea90mS-fwa" for key "foo": Scheme "hewa" not allowed. Allowed schemes: http, https
+// => java.lang.IllegalArgumentException: Invalid URL value "hewa:/ea90mS-fwa" for key "foo": Scheme "hewa" not allowed. Allowed schemes: http, https
 ```
 
 ## Build
