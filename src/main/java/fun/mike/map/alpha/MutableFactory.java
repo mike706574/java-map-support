@@ -7,9 +7,9 @@ import java.util.LinkedHashMap;
 public class MutableFactory {
     /**
      * Returns an empty mutable map.
-     * @param <K> The type of key
-     * @param <V> The type of value
-     * @return An empty mutable map
+     * @param <K> the type of key
+     * @param <V> the type of value
+     * @return an empty mutable map
      */
     public static <K, V> Map<K, V> mutableMapOf() {
         return new HashMap<>();
@@ -18,11 +18,11 @@ public class MutableFactory {
     /**
      * Returns a mutable map containing the given keys and values. Takes an
      * alternating sequence of keys and values.
-     * @param k1 A key
-     * @param v1 A value for the previous key
-     * @param <K> The type of key
-     * @param <V> The type of value
-     * @return A mutable map
+     * @param k1 a key
+     * @param v1 a value for the previous key
+     * @param <K> the type of key
+     * @param <V> the type of value
+     * @return a mutable map
      */
     public static <K, V> Map<K, V> mutableMapOf(K k1, V v1) {
         Map<K, V> map = new HashMap<>();
@@ -620,9 +620,9 @@ public class MutableFactory {
 
     /**
      * Returns an empty ordered mutable map.
-     * @param <K> The type of key
-     * @param <V> The type of value
-     * @return An empty ordered mutable map
+     * @param <K> the type of key
+     * @param <V> the type of value
+     * @return an empty ordered mutable map
      */
     public static <K, V> Map<K, V> mutableOrderedMapOf() {
         return new LinkedHashMap<>();
@@ -632,10 +632,10 @@ public class MutableFactory {
      * Returns an ordered mutable map containing the given keys and values.
      * Takes an alternating sequence of keys and values. Maintains the order
      * in which the key-value pairs are passed.
-     * @param k1 A key
-     * @param v1 A value for the previous key
-     * @param <K> The type of key
-     * @param <V> The type of value
+     * @param k1 a key
+     * @param v1 a value for the previous key
+     * @param <K> the type of key
+     * @param <V> the type of value
      * @return An ordered mutable map
      */
     public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1) {

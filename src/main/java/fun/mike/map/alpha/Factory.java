@@ -8,9 +8,9 @@ import java.util.LinkedHashMap;
 public class Factory {
     /**
      * Returns an empty unmodifiable map.
-     * @param <K> The type of key
-     * @param <V> The type of value
-     * @return An empty unmodifiable map
+     * @param <K> the type of key
+     * @param <V> the type of value
+     * @return an empty unmodifiable map
      */
     public static <K, V> Map<K, V> mapOf() {
         return Collections.unmodifiableMap(new HashMap<>());
@@ -19,11 +19,11 @@ public class Factory {
     /**
      * Returns a unmodifiable map containing the given keys and values. Takes
      * an alternating sequence of keys and values.
-     * @param k1 A key
-     * @param v1 A value for the previous key
-     * @param <K> The type of key
-     * @param <V> The type of value
-     * @return An unmodifiable map
+     * @param k1 a key
+     * @param v1 a value for the previous key
+     * @param <K> the type of key
+     * @param <V> the type of value
+     * @return an unmodifiable map
      */
     public static <K, V> Map<K, V> mapOf(K k1, V v1) {
         Map<K, V> map = new HashMap<>();
@@ -622,9 +622,9 @@ public class Factory {
 
     /**
      * Returns an empty ordered unmodifiable map.
-     * @param <K> The type of key
-     * @param <V> The type of value
-     * @return An empty ordered unmodifiable map
+     * @param <K> the type of key
+     * @param <V> the type of value
+     * @return an empty ordered unmodifiable map
      */
     public static <K, V> Map<K, V> orderedMapOf() {
         return Collections.unmodifiableMap(new LinkedHashMap<>());
@@ -634,11 +634,11 @@ public class Factory {
      * Returns an ordered unmodifiable map containing the given keys and
      * values. Takes an alternating sequence of keys and values. Maintains the
      * order in which the key-value pairs are passed.
-     * @param k1 A key
-     * @param v1 A value for the previous key
-     * @param <K> The type of key
-     * @param <V> The type of value
-     * @return An ordered unmodifiable map
+     * @param k1 a key
+     * @param v1 a value for the previous key
+     * @param <K> the type of key
+     * @param <V> the type of value
+     * @return an ordered unmodifiable map
      */
     public static <K, V> Map<K, V> orderedMapOf(K k1, V v1) {
         Map<K, V> map = new LinkedHashMap<>();

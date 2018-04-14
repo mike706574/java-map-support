@@ -12,10 +12,10 @@ public class Get {
      * Validates that the value from {@code map} for the given {@code key} is a
      * string and is present in {@code options}. Returns the value when valid;
      * otherwise, throws an {@code IllegalArgumentException}.
-     * @param map A map
-     * @param key A key
-     * @param options Acceptable values
-     * @param <T> The type of value
+     * @param map a map
+     * @param key a key
+     * @param options acceptable values
+     * @param <T> the type of value
      * @return The string value
      */
     public static <T> String requiredStringEnum(Map<String, T> map, String key, List<String> options) {
@@ -38,10 +38,10 @@ public class Get {
      * Validates that the value from {@code map} for the given {@code key} is a
      * valid, populated string URL. Returns the value when valid; otherwise,
      * throws an {@code IllegalArgumentException}.
-     * @param map A map
-     * @param key A key
-     * @param <T> The type of value
-     * @return The string value
+     * @param map a map
+     * @param key a key
+     * @param <T> the type of value
+     * @return the string value
      */
     public static <T> String populatedUrl(Map<String, T> map, String key) {
         String url = populatedStringOfType(map, key, "URL");
@@ -67,10 +67,10 @@ public class Get {
      * Validates that the value from {@code map} for the given {@code key} is
      * present and a string. Returns the value when valid; otherwise, throws an
      * {@code IllegalArgumentException}.
-     * @param map A map
-     * @param key A key
-     * @param <T> The type of value
-     * @return The string value
+     * @param map a map
+     * @param key a key
+     * @param <T> the type of value
+     * @return the string value
      */
     public static <T> String requiredString(Map<String, T> map, String key) {
         return requiredStringOfType(map, key, "string");
@@ -81,11 +81,11 @@ public class Get {
      * a populated string. Returns the value when valid; otherwise, throws an
      * {@code IllegalArgumentException}, referring to the value as being of
      * type{@code} type in the error message.
-     * @param map A map
-     * @param key A key
-     * @param type A type label
-     * @param <T> The type of value
-     * @return The string value
+     * @param map a map
+     * @param key a key
+     * @param type a type label
+     * @param <T> the type of value
+     * @return the string value
      */
     public static <T> String populatedStringOfType(Map<String, T> map, String key, String type) {
         String value = requiredStringOfType(map, key, type);
@@ -105,11 +105,11 @@ public class Get {
      * a present and a string. Returns the value when valid; otherwise, throws
      * an {@code IllegalArgumentException}, referring to the value as being of
      * type{@code} type in the error message.
-     * @param map A map
-     * @param key A key
-     * @param type A type label
-     * @param <T> The type of value
-     * @return The string value
+     * @param map a map
+     * @param key a key
+     * @param type a type label
+     * @param <T> the type of value
+     * @return the string value
      */
     public static <T> String requiredStringOfType(Map<String, T> map, String key, String type) {
         if (!map.containsKey(key)) {
@@ -140,10 +140,10 @@ public class Get {
      * Validates that the value from {@code map} for the given {@code key} is
      * a present. Returns the value when present; otherwise, throws
      * an {@code NoSuchElementException}.
-     * @param map A map
-     * @param key A key
-     * @param <T> The type of value
-     * @return The string value
+     * @param map a map
+     * @param key a key
+     * @param <T> the type of value
+     * @return the string value
      */
     public static <T> T required(Map<String, T> map, String key) {
         if (!map.containsKey(key)) {
