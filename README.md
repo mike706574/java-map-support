@@ -7,7 +7,7 @@ Map utilities for Java.
 
 ## Documentation
 
-[API Docs](https://mike706574.github.io/java-map-support/)
+[API Docs](javadoc.io/doc/fun.mike/map-support-alpha)
 
 ## Examples
 
