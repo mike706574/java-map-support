@@ -1,7 +1,6 @@
 # map-support
 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/fun.mike/map-support-alpha/badge.svg)](https://maven-badges.herokuapp.com/maven-central/fun.mike/map-support-alpha)
-[![CircleCI](https://circleci.com/gh/mike706574/java-map-support.svg?style=svg)](https://circleci.com/gh/mike706574/java-map-support)
 
 Map utilities for Java.
 
@@ -63,7 +62,9 @@ Map<String, Integer> map = mutableOrderedMapOf("foo", 1,
 // => {foo=1, bar=2} (java.util.LinkedHashMap)
 ```
 
+## Build
 
+[![CircleCI](https://circleci.com/gh/mike706574/java-map-support.svg?style=svg)](https://circleci.com/gh/mike706574/java-map-support)
 
 ## Copyright and License
 
