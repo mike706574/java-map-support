@@ -6,10 +6,25 @@ import java.util.Map;
 import java.util.LinkedHashMap;
 
 public class Factory {
+    /**
+     * Returns an empty unmodifiable map.
+     * @param <K> The type of key
+     * @param <V> The type of value
+     * @return An empty unmodifiable map
+     */
     public static <K, V> Map<K, V> mapOf() {
         return Collections.unmodifiableMap(new HashMap<>());
     }
 
+    /**
+     * Returns a unmodifiable map containing the given keys and values. Takes
+     * an alternating sequence of keys and values.
+     * @param k1 A key
+     * @param v1 A value for the previous key
+     * @param <K> The type of key
+     * @param <V> The type of value
+     * @return An unmodifiable map
+     */
     public static <K, V> Map<K, V> mapOf(K k1, V v1) {
         Map<K, V> map = new HashMap<>();
         map.put(k1, v1);
@@ -410,6 +425,7 @@ public class Factory {
         return Collections.unmodifiableMap(map);
     }
 
+
     public static <K, V> Map<K, V> mapOf(K k1, V v1, K k2, V v2,
             K k3, V v3, K k4, V v4,
             K k5, V v5, K k6, V v6,
@@ -604,10 +620,26 @@ public class Factory {
         return Collections.unmodifiableMap(map);
     }
 
+    /**
+     * Returns an empty ordered unmodifiable map.
+     * @param <K> The type of key
+     * @param <V> The type of value
+     * @return An empty ordered unmodifiable map
+     */
     public static <K, V> Map<K, V> orderedMapOf() {
         return Collections.unmodifiableMap(new LinkedHashMap<>());
     }
 
+    /**
+     * Returns an ordered unmodifiable map containing the given keys and
+     * values. Takes an alternating sequence of keys and values. Maintains the
+     * order in which the key-value pairs are passed.
+     * @param k1 A key
+     * @param v1 A value for the previous key
+     * @param <K> The type of key
+     * @param <V> The type of value
+     * @return An ordered unmodifiable map
+     */
     public static <K, V> Map<K, V> orderedMapOf(K k1, V v1) {
         Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);

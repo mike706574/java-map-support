@@ -5,10 +5,25 @@ import java.util.Map;
 import java.util.LinkedHashMap;
 
 public class MutableFactory {
+    /**
+     * Returns an empty mutable map.
+     * @param <K> The type of key
+     * @param <V> The type of value
+     * @return An empty mutable map
+     */
     public static <K, V> Map<K, V> mutableMapOf() {
         return new HashMap<>();
     }
 
+    /**
+     * Returns a mutable map containing the given keys and values. Takes an
+     * alternating sequence of keys and values.
+     * @param k1 A key
+     * @param v1 A value for the previous key
+     * @param <K> The type of key
+     * @param <V> The type of value
+     * @return A mutable map
+     */
     public static <K, V> Map<K, V> mutableMapOf(K k1, V v1) {
         Map<K, V> map = new HashMap<>();
         map.put(k1, v1);
@@ -603,10 +618,26 @@ public class MutableFactory {
         return map;
     }
 
+    /**
+     * Returns an empty ordered mutable map.
+     * @param <K> The type of key
+     * @param <V> The type of value
+     * @return An empty ordered mutable map
+     */
     public static <K, V> Map<K, V> mutableOrderedMapOf() {
         return new LinkedHashMap<>();
     }
 
+    /**
+     * Returns an ordered mutable map containing the given keys and values.
+     * Takes an alternating sequence of keys and values. Maintains the order
+     * in which the key-value pairs are passed.
+     * @param k1 A key
+     * @param v1 A value for the previous key
+     * @param <K> The type of key
+     * @param <V> The type of value
+     * @return An ordered mutable map
+     */
     public static <K, V> Map<K, V> mutableOrderedMapOf(K k1, V v1) {
         Map<K, V> map = new LinkedHashMap<>();
         map.put(k1, v1);

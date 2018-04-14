@@ -8,6 +8,16 @@ import java.util.stream.Collectors;
 import fun.mike.validation.UrlValidator;
 
 public class Get {
+    /**
+     * Validates that the value from {@code map} for the given {@code key} is a
+     * string and is present in {@code options}. Returns the value when valid;
+     * otherwise, throws an {@code IllegalArgumentException}.
+     * @param map A map
+     * @param key A key
+     * @param options Acceptable values
+     * @param <T> The type of value
+     * @return The string value
+     */
     public static <T> String requiredStringEnum(Map<String, T> map, String key, List<String> options) {
         String value = requiredString(map, key);
         List<String> uppercaseOptions = options.stream().map(String::toUpperCase).collect(Collectors.toList());
@@ -24,6 +34,15 @@ public class Get {
         return value;
     }
 
+    /**
+     * Validates that the value from {@code map} for the given {@code key} is a
+     * valid, populated string URL. Returns the value when valid; otherwise,
+     * throws an {@code IllegalArgumentException}.
+     * @param map A map
+     * @param key A key
+     * @param <T> The type of value
+     * @return The string value
+     */
     public static <T> String populatedUrl(Map<String, T> map, String key) {
         String url = populatedStringOfType(map, key, "URL");
         UrlValidator.http(url)
@@ -31,14 +50,43 @@ public class Get {
         return url;
     }
 
+    /**
+     * Validates that the value from {@code map} for the given {@code key} is a
+     * populated string. Returns the value when valid; otherwise, throws an
+     * {@code IllegalArgumentException}.
+     * @param map A map
+     * @param key A key
+     * @param <T> The type of value
+     * @return The string value
+     */
     public static <T> String populatedString(Map<String, T> map, String key) {
         return populatedStringOfType(map, key, "string");
     }
 
+    /**
+     * Validates that the value from {@code map} for the given {@code key} is
+     * present and a string. Returns the value when valid; otherwise, throws an
+     * {@code IllegalArgumentException}.
+     * @param map A map
+     * @param key A key
+     * @param <T> The type of value
+     * @return The string value
+     */
     public static <T> String requiredString(Map<String, T> map, String key) {
         return requiredStringOfType(map, key, "string");
     }
 
+    /**
+     * Validates that the value from {@code map} for the given {@code key} is
+     * a populated string. Returns the value when valid; otherwise, throws an
+     * {@code IllegalArgumentException}, referring to the value as being of
+     * type{@code} type in the error message.
+     * @param map A map
+     * @param key A key
+     * @param type A type label
+     * @param <T> The type of value
+     * @return The string value
+     */
     public static <T> String populatedStringOfType(Map<String, T> map, String key, String type) {
         String value = requiredStringOfType(map, key, type);
 
@@ -52,6 +100,17 @@ public class Get {
         return value;
     }
 
+    /**
+     * Validates that the value from {@code map} for the given {@code key} is
+     * a present and a string. Returns the value when valid; otherwise, throws
+     * an {@code IllegalArgumentException}, referring to the value as being of
+     * type{@code} type in the error message.
+     * @param map A map
+     * @param key A key
+     * @param type A type label
+     * @param <T> The type of value
+     * @return The string value
+     */
     public static <T> String requiredStringOfType(Map<String, T> map, String key, String type) {
         if (!map.containsKey(key)) {
             String message = String.format("Missing required %s property \"%s\".",
@@ -63,6 +122,15 @@ public class Get {
         return (String) map.get(key);
     }
 
+    /**
+     * Validates that the value from {@code map} for the given {@code key} is
+     * a present. Returns the value when present; otherwise, throws
+     * an {@code NoSuchElementException}.
+     * @param map A map
+     * @param key A key
+     * @param <T> The type of value
+     * @return The string value
+     */
     public static <T> T required(Map<String, T> map, String key) {
         if (!map.containsKey(key)) {
             String message = String.format("Missing required property \"%s\".",
