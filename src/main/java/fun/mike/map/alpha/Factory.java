@@ -620,6 +620,17 @@ public class Factory {
         return Collections.unmodifiableMap(map);
     }
 
+    @SuppressWarnings("unchecked")
+    public static <K, V> Map<K, V> mapOf(Object... kvs) {
+        Map<K, V> map = new HashMap<>();
+        for(int i = 0; i < kvs.length; i += 2) {
+            K k = (K)kvs[i];
+            V v = (V)kvs[i + 1];
+            map.put(k, v);
+        }
+        return Collections.unmodifiableMap(map);
+    }
+
     /**
      * Returns an empty ordered unmodifiable map.
      * @param <K> the type of key
@@ -1231,6 +1242,17 @@ public class Factory {
         map.put(k23, v23);
         map.put(k24, v24);
         map.put(k25, v25);
+        return Collections.unmodifiableMap(map);
+    }
+
+    @SuppressWarnings("unchecked")
+    public static <K, V> Map<K, V> orderedMapOf(Object... kvs) {
+        Map<K, V> map = new LinkedHashMap<>();
+        for(int i = 0; i < kvs.length; i += 2) {
+            K k = (K)kvs[i];
+            V v = (V)kvs[i + 1];
+            map.put(k, v);
+        }
         return Collections.unmodifiableMap(map);
     }
 }

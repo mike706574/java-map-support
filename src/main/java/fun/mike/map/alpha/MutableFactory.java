@@ -618,6 +618,17 @@ public class MutableFactory {
         return map;
     }
 
+    @SuppressWarnings("unchecked")
+    public static <K, V> Map<K, V> mutableMapOf(Object... kvs) {
+        Map<K, V> map = new LinkedHashMap<>();
+        for(int i = 0; i < kvs.length; i += 2) {
+            K k = (K)kvs[i];
+            V v = (V)kvs[i + 1];
+            map.put(k, v);
+        }
+        return map;
+    }
+
     /**
      * Returns an empty ordered mutable map.
      * @param <K> the type of key
@@ -1229,6 +1240,17 @@ public class MutableFactory {
         map.put(k23, v23);
         map.put(k24, v24);
         map.put(k25, v25);
+        return map;
+    }
+
+    @SuppressWarnings("unchecked")
+    public static <K, V> Map<K, V> mutableOrderedMapOf(Object... kvs) {
+        Map<K, V> map = new LinkedHashMap<>();
+        for(int i = 0; i < kvs.length; i += 2) {
+            K k = (K)kvs[i];
+            V v = (V)kvs[i + 1];
+            map.put(k, v);
+        }
         return map;
     }
 }
